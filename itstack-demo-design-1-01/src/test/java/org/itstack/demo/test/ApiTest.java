@@ -11,12 +11,10 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class ApiTest {
-
     private Logger logger = LoggerFactory.getLogger(ApiTest.class);
 
     @Test
     public void test_awardToUser() {
-
         PrizeController prizeController = new PrizeController();
 
         System.out.println("\r\n模拟发放优惠券测试\r\n");
@@ -57,7 +55,5 @@ public class ApiTest {
         AwardRes awardRes03 = prizeController.awardToUser(req03);
         logger.info("请求参数：{}", JSON.toJSON(req03));
         logger.info("测试结果：{}", JSON.toJSON(awardRes03));
-
     }
-
 }

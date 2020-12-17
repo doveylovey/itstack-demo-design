@@ -1,7 +1,6 @@
 package org.itstack.demo.design.goods;
 
 public class DeliverReq {
-
     private String userName;              // 用户姓名
     private String userPhone;             // 用户手机
     private String sku;                   // 商品SKU

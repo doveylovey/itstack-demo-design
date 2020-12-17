@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
  * 模拟发奖服务
  */
 public class PrizeController {
-
     private Logger logger = LoggerFactory.getLogger(PrizeController.class);
 
     public AwardRes awardToUser(AwardReq req) {
@@ -57,7 +56,6 @@ public class PrizeController {
             logger.error("奖品发放失败{}。req:{}", req.getuId(), reqJson, e);
             awardRes = new AwardRes("0001", e.getMessage());
         }
-
         return awardRes;
     }
 
@@ -68,5 +66,4 @@ public class PrizeController {
     private String queryUserPhoneNumber(String uId) {
         return "15200101232";
     }
-
 }

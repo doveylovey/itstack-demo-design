@@ -1,7 +1,6 @@
 package org.itstack.demo.design;
 
 public class AwardRes {
-
     private String code; // 编码
     private String info; // 描述
 
@@ -25,5 +24,4 @@ public class AwardRes {
     public void setInfo(String info) {
         this.info = info;
     }
-
 }
