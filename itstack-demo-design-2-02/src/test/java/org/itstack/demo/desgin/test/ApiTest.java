@@ -8,10 +8,8 @@ import org.itstack.demo.desgin.impl.CacheServiceImpl;
 import org.junit.Test;
 
 public class ApiTest {
-
     @Test
-    public void test_CacheService() throws Exception {
-
+    public void test_CacheService() {
         CacheService proxy_EGM = JDKProxy.getProxy(CacheServiceImpl.class, new EGMCacheAdapter());
         proxy_EGM.set("user_name_01", "小傅哥");
         String val01 = proxy_EGM.get("user_name_01");
@@ -21,7 +19,5 @@ public class ApiTest {
         proxy_IIR.set("user_name_01", "小傅哥");
         String val02 = proxy_IIR.get("user_name_01");
         System.out.println("测试结果：" + val02);
-
     }
-
 }

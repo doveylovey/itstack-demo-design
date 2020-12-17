@@ -8,7 +8,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 public class RedisUtils {
-
     private Logger logger = LoggerFactory.getLogger(RedisUtils.class);
 
     private Map<String, String> dataMap = new ConcurrentHashMap<String, String>();

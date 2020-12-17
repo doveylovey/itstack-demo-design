@@ -7,7 +7,6 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class ClassLoaderUtils {
-
     private static Set<Class> primitiveSet = new HashSet<Class>();
 
     static {
@@ -62,8 +61,7 @@ public class ClassLoaderUtils {
      * @return Class
      * @throws ClassNotFoundException 找不到类
      */
-    public static Class forName(String className)
-            throws ClassNotFoundException {
+    public static Class forName(String className) throws ClassNotFoundException {
         return forName(className, true);
     }
 
@@ -75,8 +73,7 @@ public class ClassLoaderUtils {
      * @return Class
      * @throws ClassNotFoundException 找不到类
      */
-    public static Class forName(String className, boolean initialize)
-            throws ClassNotFoundException {
+    public static Class forName(String className, boolean initialize) throws ClassNotFoundException {
         return Class.forName(className, initialize, getCurrentClassLoader());
     }
 
@@ -88,8 +85,7 @@ public class ClassLoaderUtils {
      * @return Class
      * @throws ClassNotFoundException 找不到类
      */
-    public static Class forName(String className, ClassLoader cl)
-            throws ClassNotFoundException {
+    public static Class forName(String className, ClassLoader cl) throws ClassNotFoundException {
         return Class.forName(className, true, cl);
     }
 
@@ -181,6 +177,5 @@ public class ClassLoaderUtils {
     public Method getMethod(Class<?> classType, String methodName, Class<?>... parameterTypes) throws NoSuchMethodException {
         return classType.getMethod(methodName, parameterTypes);
     }
-
 }
 
