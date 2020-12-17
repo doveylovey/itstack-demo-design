@@ -1,7 +1,6 @@
 package org.itstack.demo.design;
 
 public interface IMenu {
-
     /**
      * 吊顶
      */
@@ -26,5 +25,4 @@ public interface IMenu {
      * 明细
      */
     String getDetail();
-
 }

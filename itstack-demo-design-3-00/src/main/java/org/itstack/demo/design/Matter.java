@@ -3,12 +3,11 @@ package org.itstack.demo.design;
 import java.math.BigDecimal;
 
 /**
- * 装修物料
+ * 装修材料
  */
 public interface Matter {
-
     /**
-     * 场景；地板、地砖、涂料、吊顶
+     * 场景：地板、地砖、涂料、吊顶
      */
     String scene();
 
@@ -31,5 +30,4 @@ public interface Matter {
      * 描述
      */
     String desc();
-
 }
