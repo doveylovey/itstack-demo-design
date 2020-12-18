@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 装修包
+ * 装修包具体实现：添加各种物料、获取装修报价单
  */
 public class DecorationPackageMenu implements IMenu {
     private List<Matter> list = new ArrayList<>();  // 装修清单

@@ -1,5 +1,8 @@
 package org.itstack.demo.design;
 
+/**
+ * 装修包接口：添加各种物料、获取装修报价单
+ */
 public interface IMenu {
     /**
      * 吊顶

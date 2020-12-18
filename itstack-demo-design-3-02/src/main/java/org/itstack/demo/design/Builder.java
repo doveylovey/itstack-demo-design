@@ -8,6 +8,9 @@ import org.itstack.demo.design.floor.ShengXiangFloor;
 import org.itstack.demo.design.tile.DongPengTile;
 import org.itstack.demo.design.tile.MarcoPoloTile;
 
+/**
+ * 构建具体装修包：通过不同物料填充出不同装修风格
+ */
 public class Builder {
     public IMenu levelOne(Double area) {
         return new DecorationPackageMenu(area, "豪华欧式")
