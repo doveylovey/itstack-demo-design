@@ -62,14 +62,13 @@ public class DecorationPackageController {
             price = price.add(area.multiply(dongPengTile.price()));
         }
 
-        StringBuilder detail = new StringBuilder("\r\n-------------------------------------------------------\r\n" +
-                "装修清单" + "\r\n" +
+        StringBuilder detail = new StringBuilder("\r\n-------------------------装修清单-------------------------\r\n" +
                 "套餐等级：" + level + "\r\n" +
                 "套餐价格：" + price.setScale(2, BigDecimal.ROUND_HALF_UP) + " 元\r\n" +
-                "房屋面积：" + area.doubleValue() + " 平米\r\n" +
+                "房屋面积：" + area.doubleValue() + " 平方米\r\n" +
                 "材料清单：\r\n");
         for (Matter matter : list) {
-            detail.append(matter.scene()).append("：").append(matter.brand()).append("、").append(matter.model()).append("、平米价格：").append(matter.price()).append(" 元。\n");
+            detail.append(matter.scene()).append("：").append(matter.brand()).append("、").append(matter.model()).append("、").append(matter.price()).append(" 元/平方米。\n");
         }
         return detail.toString();
     }
