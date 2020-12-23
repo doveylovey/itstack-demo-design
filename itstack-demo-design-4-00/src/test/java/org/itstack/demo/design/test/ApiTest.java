@@ -5,12 +5,10 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-
 public class ApiTest {
-
     @Test
-    public void test_clone() throws CloneNotSupportedException {
-        ArrayList<String> l01 = new ArrayList<String>();
+    public void test_clone() {
+        ArrayList<String> l01 = new ArrayList<>();
         l01.add("xxx");
         l01.add("yyy");
 
@@ -25,5 +23,4 @@ public class ApiTest {
         System.out.println(JSON.toJSONString(l01));
         System.out.println(JSON.toJSONString(l02));
     }
-
 }

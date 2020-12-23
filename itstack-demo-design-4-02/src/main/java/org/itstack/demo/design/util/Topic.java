@@ -1,12 +1,8 @@
 package org.itstack.demo.design.util;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 
 public class Topic {
-
     private Map<String, String> option;  // 选项；A、B、C、D
     private String key;           // 答案；B
 

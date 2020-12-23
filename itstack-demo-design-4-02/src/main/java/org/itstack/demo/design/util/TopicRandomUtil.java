@@ -3,18 +3,18 @@ package org.itstack.demo.design.util;
 import java.util.*;
 
 public class TopicRandomUtil {
-
     /**
      * 乱序Map元素，记录对应答案key
+     *
      * @param option 题目
      * @param key    答案
      * @return Topic 乱序后 {A=c., B=d., C=a., D=b.}
      */
     static public Topic random(Map<String, String> option, String key) {
         Set<String> keySet = option.keySet();
-        ArrayList<String> keyList = new ArrayList<String>(keySet);
+        ArrayList<String> keyList = new ArrayList<>(keySet);
         Collections.shuffle(keyList);
-        HashMap<String, String> optionNew = new HashMap<String, String>();
+        HashMap<String, String> optionNew = new HashMap<>(4);
         int idx = 0;
         String keyNew = "";
         for (String next : keySet) {
@@ -26,5 +26,4 @@ public class TopicRandomUtil {
         }
         return new Topic(optionNew, keyNew);
     }
-
 }

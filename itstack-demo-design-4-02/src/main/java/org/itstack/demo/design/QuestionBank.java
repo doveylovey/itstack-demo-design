@@ -7,13 +7,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
+/**
+ * 题库类：负责组装各个题目并输出最终试卷
+ */
 public class QuestionBank implements Cloneable {
-
     private String candidate; // 考生
     private String number;    // 考号
 
-    private ArrayList<ChoiceQuestion> choiceQuestionList = new ArrayList<ChoiceQuestion>();
-    private ArrayList<AnswerQuestion> answerQuestionList = new ArrayList<AnswerQuestion>();
+    private ArrayList<ChoiceQuestion> choiceQuestionList = new ArrayList<>();
+    private ArrayList<AnswerQuestion> answerQuestionList = new ArrayList<>();
 
     public QuestionBank append(ChoiceQuestion choiceQuestion) {
         choiceQuestionList.add(choiceQuestion);
@@ -54,29 +56,24 @@ public class QuestionBank implements Cloneable {
 
     @Override
     public String toString() {
-
         StringBuilder detail = new StringBuilder("考生：" + candidate + "\r\n" +
                 "考号：" + number + "\r\n" +
                 "--------------------------------------------\r\n" +
                 "一、选择题" + "\r\n\n");
-
         for (int idx = 0; idx < choiceQuestionList.size(); idx++) {
             detail.append("第").append(idx + 1).append("题：").append(choiceQuestionList.get(idx).getName()).append("\r\n");
             Map<String, String> option = choiceQuestionList.get(idx).getOption();
             for (String key : option.keySet()) {
-                detail.append(key).append("：").append(option.get(key)).append("\r\n");;
+                detail.append(key).append("：").append(option.get(key)).append("\r\n");
+                ;
             }
             detail.append("答案：").append(choiceQuestionList.get(idx).getKey()).append("\r\n\n");
         }
-
         detail.append("二、问答题" + "\r\n\n");
-
         for (int idx = 0; idx < answerQuestionList.size(); idx++) {
             detail.append("第").append(idx + 1).append("题：").append(answerQuestionList.get(idx).getName()).append("\r\n");
             detail.append("答案：").append(answerQuestionList.get(idx).getKey()).append("\r\n\n");
         }
-
         return detail.toString();
     }
-
 }
