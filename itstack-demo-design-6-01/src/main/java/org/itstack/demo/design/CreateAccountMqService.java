@@ -1,18 +1,13 @@
 package org.itstack.demo.design;
 
 import com.alibaba.fastjson.JSON;
-import org.itstack.demo.design.mq.create_account;
+import org.itstack.demo.design.mq.CreateAccount;
 
-public class create_accountMqService {
-
+public class CreateAccountMqService {
     public void onMessage(String message) {
-
-        create_account mq = JSON.parseObject(message, create_account.class);
-
+        CreateAccount mq = JSON.parseObject(message, CreateAccount.class);
         mq.getNumber();
         mq.getAccountDate();
-
         // ... 处理自己的业务
     }
-
 }

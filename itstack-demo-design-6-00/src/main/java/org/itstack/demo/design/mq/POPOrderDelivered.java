@@ -6,10 +6,9 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 订单妥投消息
+ * 第三方订单 MQ
  */
 public class POPOrderDelivered {
-
     private String uId;     // 用户ID
     private String orderId; // 订单号
     private Date orderTime; // 下单时间
@@ -69,5 +68,4 @@ public class POPOrderDelivered {
     public String toString() {
         return JSON.toJSONString(this);
     }
-
 }
